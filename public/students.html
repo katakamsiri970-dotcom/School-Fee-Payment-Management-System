@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Students | K. Siri</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">K</div>
+
+            <div>
+                <h2>K. SIRI</h2>
+                <p>SCHOOL FEE MANAGEMENT</p>
+            </div>
+        </div>
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <nav>
+            <a href="index.html">
+                <span>▦</span> Dashboard
+            </a>
+
+            <a href="students.html" class="active">
+                <span>♙</span> Students
+            </a>
+
+            <a href="fees.html">
+                <span>▤</span> Fee Details
+            </a>
+
+            <a href="payments.html">
+                <span>₹</span> Payments
+            </a>
+
+            <a href="reports.html">
+                <span>▥</span> Reports
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <strong>K. Siri</strong><br>
+            <small>School Administration</small>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+                <h1>Students Management</h1>
+                <p>Manage and maintain student information</p>
+            </div>
+
+            <div class="admin">
+                <div class="admin-icon">A</div>
+                <span>Admin</span>
+            </div>
+
+        </header>
+
+
+        <!-- PAGE INTRO -->
+        <section class="student-welcome">
+
+            <div>
+                <span class="student-tag">STUDENT PORTAL</span>
+
+                <h2>Student Details</h2>
+
+                <p>
+                    Add new students and manage all registered
+                    student information in one place.
+                </p>
+            </div>
+
+            <div class="student-symbol">♙</div>
+
+        </section>
+
+
+        <!-- ADD STUDENT FORM -->
+        <section class="student-card">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Add New Student</h2>
+                    <p>Enter the details below to register a student.</p>
+                </div>
+
+                <span class="section-icon">＋</span>
+            </div>
+
+
+            <form id="studentForm">
+
+                <div class="student-form-grid">
+
+                    <div class="form-group">
+                        <label for="name">Student Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter student name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentClass">Class</label>
+                        <input
+                            type="text"
+                            id="studentClass"
+                            placeholder="Example: B.Tech 3rd Year"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="roll_no">Roll Number</label>
+                        <input
+                            type="text"
+                            id="roll_no"
+                            placeholder="Enter roll number"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter phone number"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="email">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter email address"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="add-student-btn">
+                        + Add Student
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- STUDENT TABLE -->
+        <section class="student-card">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Student List</h2>
+                    <p>View all registered students.</p>
+                </div>
+
+                <span class="list-label">REGISTERED STUDENTS</span>
+            </div>
+
+
+            <div class="table-container">
+
+                <table class="student-table">
+
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>Roll No</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentsTable">
+
+                        <tr>
+                            <td colspan="6" class="loading-message">
+                                Loading students...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

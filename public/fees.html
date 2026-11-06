@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Details | K. Siri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">K</div>
+            <div>
+                <h2>K. SIRI</h2>
+                <p>SCHOOL FEE MANAGEMENT</p>
+            </div>
+        </div>
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <nav>
+            <a href="index.html"><span>▦</span> Dashboard</a>
+            <a href="students.html"><span>♙</span> Students</a>
+            <a href="fees.html" class="active"><span>▤</span> Fee Details</a>
+            <a href="payments.html"><span>₹</span> Payments</a>
+            <a href="reports.html"><span>▥</span> Reports</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <strong>K. Siri</strong><br>
+            <small>School Administration</small>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Fee Management</h1>
+                <p>Manage student fee details and due dates</p>
+            </div>
+
+            <div class="admin">
+                <div class="admin-icon">A</div>
+                <span>Admin</span>
+            </div>
+        </header>
+
+
+        <!-- BANNER -->
+        <section class="student-welcome">
+
+            <div>
+                <span class="student-tag">FEE MANAGEMENT PORTAL</span>
+                <h2>Fee Details</h2>
+                <p>
+                    Create and manage student fee records,
+                    academic years and payment dues.
+                </p>
+            </div>
+
+            <div class="student-symbol">₹</div>
+
+        </section>
+
+
+        <!-- ADD FEE FORM -->
+        <section class="student-card">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Add New Fee</h2>
+                    <p>Enter the fee information below.</p>
+                </div>
+
+                <span class="section-icon">＋</span>
+            </div>
+
+            <form id="feeForm">
+
+                <div class="student-form-grid">
+
+                    <div class="form-group">
+                        <label for="student_id">Student ID</label>
+                        <input
+                            type="number"
+                            id="student_id"
+                            placeholder="Enter student ID"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="academic_year">Academic Year</label>
+                        <input
+                            type="text"
+                            id="academic_year"
+                            placeholder="Example: 2026-2027"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fee_type">Fee Type</label>
+                        <select id="fee_type" required>
+                            <option value="">Select Fee Type</option>
+                            <option value="Tuition Fee">Tuition Fee</option>
+                            <option value="Exam Fee">Exam Fee</option>
+                            <option value="Transport Fee">Transport Fee</option>
+                            <option value="Library Fee">Library Fee</option>
+                            <option value="Other Fee">Other Fee</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="total_amount">Total Amount (₹)</label>
+                        <input
+                            type="number"
+                            id="total_amount"
+                            placeholder="Enter amount"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="due_date">Due Date</label>
+                        <input
+                            type="date"
+                            id="due_date"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="add-student-btn">
+                        + Add Fee
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- FEE TABLE -->
+        <section class="student-card">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Fee Records</h2>
+                    <p>All student fee records are displayed here.</p>
+                </div>
+
+                <span class="list-label">FEE INFORMATION</span>
+            </div>
+
+            <div class="table-container">
+
+                <table class="student-table">
+
+                    <thead>
+                        <tr>
+                            <th>Fee ID</th>
+                            <th>Student ID</th>
+                            <th>Academic Year</th>
+                            <th>Fee Type</th>
+                            <th>Total Amount</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="feesTable">
+                        <tr>
+                            <td colspan="6" class="loading-message">
+                                Loading fee records...
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

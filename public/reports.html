@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | K. Siri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">K</div>
+            <div>
+                <h2>K. SIRI</h2>
+                <p>SCHOOL FEE MANAGEMENT</p>
+            </div>
+        </div>
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <nav>
+            <a href="index.html"><span>▦</span> Dashboard</a>
+            <a href="students.html"><span>♙</span> Students</a>
+            <a href="fees.html"><span>▤</span> Fee Details</a>
+            <a href="payments.html"><span>₹</span> Payments</a>
+            <a href="reports.html" class="active"><span>▥</span> Reports</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <strong>K. Siri</strong><br>
+            <small>School Administration</small>
+        </div>
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Reports & Analytics</h1>
+                <p>View school fee collection reports</p>
+            </div>
+
+            <div class="admin">
+                <div class="admin-icon">A</div>
+                <span>Admin</span>
+            </div>
+        </header>
+
+
+        <section class="student-welcome">
+            <div>
+                <span class="student-tag">REPORTING PORTAL</span>
+                <h2>Fee Collection Reports</h2>
+                <p>Monitor fee payments and collection information.</p>
+            </div>
+            <div class="student-symbol">▥</div>
+        </section>
+
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <p>Total Students</p>
+                <h2 id="reportStudents">0</h2>
+                <span>Registered Students</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Total Fees</p>
+                <h2 id="reportFees">₹0</h2>
+                <span>Assigned Fee Amount</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Total Collection</p>
+                <h2 id="reportCollection">₹0</h2>
+                <span>Payments Received</span>
+            </div>
+
+            <div class="stat-card">
+                <p>Pending Amount</p>
+                <h2 id="reportPending">₹0</h2>
+                <span>Remaining Fee Amount</span>
+            </div>
+
+        </section>
+
+
+        <section class="student-card">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Report Summary</h2>
+                    <p>Overview of fee collection performance.</p>
+                </div>
+                <span class="section-icon">₹</span>
+            </div>
+
+            <div class="table-container">
+                <table class="student-table">
+                    <thead>
+                        <tr>
+                            <th>Report</th>
+                            <th>Description</th>
+                            <th>Amount / Count</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Total Students</td>
+                            <td>Number of registered students</td>
+                            <td id="summaryStudents">0</td>
+                        </tr>
+
+                        <tr>
+                            <td>Total Fees</td>
+                            <td>Total assigned fee amount</td>
+                            <td id="summaryFees">₹0</td>
+                        </tr>
+
+                        <tr>
+                            <td>Total Collection</td>
+                            <td>Total amount received</td>
+                            <td id="summaryCollection">₹0</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pending Fees</td>
+                            <td>Remaining amount to be collected</td>
+                            <td id="summaryPending">₹0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
